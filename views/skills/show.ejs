@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= skill.skill %></title>
+</head>
+<body>
+    <h1>Show Page</h1>
+    <!-- skill name -->
+    <h3><%= skill.skill %></h3>
+    <!-- format uderstand data -->
+    <h3>Understand: <%= skill.understand ? 'Yes' : 'Kinda' %></h3>
+    <!-- Delete Button -->
+    <form method="POST" action="/skills/<%= skill.id %>?_method=DELETE">
+        <button type="submit">Delete</button>
+    </form>
+</body>
+</html>
